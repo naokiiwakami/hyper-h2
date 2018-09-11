@@ -225,6 +225,8 @@ class H2ConnectionStateMachine(object):
             (None, ConnectionState.CLOSED),
         (ConnectionState.CLOSED, ConnectionInputs.RECV_GOAWAY):
             (None, ConnectionState.CLOSED),
+        (ConnectionState.CLOSED, ConnectionInputs.RECV_WINDOW_UPDATE):
+            (None, ConnectionState.CLOSED),
     }
 
     def __init__(self):
